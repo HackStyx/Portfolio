@@ -198,7 +198,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .hexPolygonColor(() => defaultProps.polygonColor);
       startAnimation();
     }
-  }, [globeData, defaultProps.showAtmosphere, defaultProps.atmosphereColor, defaultProps.atmosphereAltitude, defaultProps.polygonColor]);
+  }, [globeData, defaultProps.showAtmosphere, defaultProps.atmosphereColor, defaultProps.atmosphereAltitude, defaultProps.polygonColor, startAnimation]);
 
   useEffect(() => {
     if (!globeRef.current || !globeData) return;
@@ -219,7 +219,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData, data.length]);
+  }, [globeData, data.length]);
 
   useFrame(() => {
     if (globeRef.current) {
