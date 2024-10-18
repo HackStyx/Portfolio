@@ -61,17 +61,17 @@ const RecentProjects = () => {
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-black lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center"
                       style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
+                        transform: `translateX(-${8 * index}px)`,
                       }}
                     >
                       <Image
                         src={icon}
                         alt={`Tech icon ${index + 1}`}
-                        className="p-2"
-                        width={20}
-                        height={20}
+                        className="p-1.5"
+                        width={32}
+                        height={32}
                       />
                     </div>
                   ))}
